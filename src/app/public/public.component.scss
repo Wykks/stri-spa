@@ -1,0 +1,30 @@
+mdl-layout-header {
+  background-color: white;
+  .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  nav {
+    .mdl-navigation__link {
+      display: inline-block;
+      height: 60px;
+      line-height: 68px;
+      background-color: transparent !important;
+      border-bottom: 4px solid transparent;
+      &.active {
+        border-bottom: 4px solid #8bc34a;
+      }
+    }
+  }
+  mdl-layout-title {
+    img {
+      height: auto;
+      width: 20%;
+    }
+  }
+}
+
+/deep/ .mdl-layout__drawer-button {
+  color: #767777;
+}

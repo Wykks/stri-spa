@@ -1,0 +1,39 @@
+<mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed>
+  <mdl-layout-header>
+    <mdl-layout-header-row>
+      <mdl-layout-title>
+        <img src="assets/strilog.png">
+      </mdl-layout-title>
+      <mdl-layout-spacer></mdl-layout-spacer>
+      <nav class="mdl-navigation">
+        <button mdl-button #btn1="mdlButton" mdl-ripple>Accès au campus</button>
+        <button mdl-button #btn1="mdlButton" (click)="m1.toggle($event, btn1)" mdl-ripple>Présentation</button>
+        <mdl-menu #m1="mdlMenu" mdl-menu-position="bottom-left">
+          <mdl-menu-item mdl-ripple (click)="action()">La Formation STRI</mdl-menu-item>
+          <mdl-menu-item mdl-ripple (click)="action()">Objectifs/Métiers</mdl-menu-item>
+        </mdl-menu>
+        <!-- <a class="mdl-navigation__link" routerLink="/pres" routerLinkActive="active">Présentation</a>
+        <a class="mdl-navigation__link" routerLink="/cursus" routerLinkActive="active">Cursus</a> -->
+      </nav>
+    </mdl-layout-header-row>
+  </mdl-layout-header>
+  <mdl-layout-drawer>
+    <mdl-layout-title>Title</mdl-layout-title>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" routerLink="/access" routerLinkActive="active">Link</a>
+      <a class="mdl-navigation__link" routerLink="/" routerLinkActive="active">Link</a>
+    </nav>
+  </mdl-layout-drawer>
+  <mdl-layout-content>
+    <router-outlet></router-outlet>
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Title</div>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </footer>
+  </mdl-layout-content>
+</mdl-layout>
